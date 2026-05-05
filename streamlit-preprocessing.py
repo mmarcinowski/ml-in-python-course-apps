@@ -42,6 +42,7 @@ poly_deg = st.sidebar.slider("Stopień wielomianów", 1, 3, 1)
 var_thresh = st.sidebar.slider("Próg wariancji (selekcja)", 0.0, 1.0, 0.0, 0.01)
 
 df_proc = df_raw.copy()
+
 num_cols = df_proc.select_dtypes(include=[np.number]).columns.tolist()
 cat_cols = df_proc.select_dtypes(include=['object']).columns.tolist()
 
