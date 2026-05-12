@@ -114,7 +114,7 @@ else:
     param_grid = {'classifier__n_neighbors': list(range(k_range[0], k_range[1] + 1))}
     model_base = KNeighborsClassifier()
 
-cv_folds = st.number_input("Cross-Validation", 2, 10, 5)
+cv_folds = st.number_input("Cross-Validation folds", 2, 10, 5)
 
 def build_full_pipeline():
     num_features = X.select_dtypes(include=['int64', 'float64']).columns
